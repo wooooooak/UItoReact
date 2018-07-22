@@ -1,6 +1,8 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import styledComponents from 'styled-components';
 import styledComponentsTS from 'styled-components-ts';
+import styled from 'styled-components';
 
 interface MenuBarProps {
   backgroundColor?: string;
@@ -16,10 +18,6 @@ interface NavBarProps {
   top?: string;
 }
 
-interface NavBarElementProps {
-  href: string;
-}
-
 const NavBar = styledComponentsTS<NavBarProps>(styledComponents.div)`
   background-color: ${(props) => props.backgroundColor};
   color: white;
@@ -30,8 +28,8 @@ const NavBar = styledComponentsTS<NavBarProps>(styledComponents.div)`
   top: ${(props) => props.top};
 `;
 
-const NavBarElement = styledComponentsTS<NavBarElementProps>(styledComponents.a)`
-  float: left;
+const NavBarElement = styled(Link)`
+float: left;
   display: block;
   color: #fff;
   font-weight: 300;
@@ -48,7 +46,6 @@ class Menu extends React.Component<MenuBarProps, StateProps> {
 
   componentDidMount (): any {
     window.onscroll = (): void => {
-      console.log('exex');
       const currentScrollpos: number = window.pageYOffset;
       if (this.state.prevScrollpos < currentScrollpos) {
         this.setState({
@@ -68,17 +65,11 @@ class Menu extends React.Component<MenuBarProps, StateProps> {
     return (
       <div>
         <NavBar top={this.state.top} backgroundColor={this.props.backgroundColor}>
-          <NavBarElement href="#">Home</NavBarElement>
-          <NavBarElement href="#">Services</NavBarElement>
-          <NavBarElement href="#">Contact</NavBarElement>
+          <NavBarElement to="/">Home</NavBarElement>
+          <NavBarElement to="/gooeyEffect">GooeyEffect</NavBarElement>
+          <NavBarElement to="#">not yet</NavBarElement>
         </NavBar>
-        <div>
-          <h1>Scroll Down</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio ratione,
-            repellat recusandae numquam officiis tempora dolore laboriosam quod vero minus
-          </p>
-        </div>
+        <div />
         {this.state.prevScrollpos}
       </div>
     );
