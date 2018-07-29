@@ -67,7 +67,7 @@ class Menu extends React.Component<MenuBarProps, StateProps> {
         <NavBar top={this.state.top} backgroundColor={this.props.backgroundColor}>
           <NavBarElement to="/">Home</NavBarElement>
           <NavBarElement to="/gooeyEffect">GooeyEffect</NavBarElement>
-          <NavBarElement to="#">not yet</NavBarElement>
+          <NavBarElement to="/textFadeLoader">textFadeLoader</NavBarElement>
         </NavBar>
         <div />
         {this.state.prevScrollpos}
