@@ -68,6 +68,7 @@ class Menu extends React.Component<MenuBarProps, StateProps> {
           <NavBarElement to="/">Home</NavBarElement>
           <NavBarElement to="/gooeyEffect">GooeyEffect</NavBarElement>
           <NavBarElement to="/textFadeLoader">textFadeLoader</NavBarElement>
+          <NavBarElement to="/slidingLandingPage">SlidingLandingPage</NavBarElement>
         </NavBar>
         <div />
         {this.state.prevScrollpos}

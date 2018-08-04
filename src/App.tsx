@@ -5,6 +5,7 @@ import { injectGlobal } from 'styled-components';
 import Menu from './router/Menu';
 import GooeyEffect from './components/GooeyEffect';
 import TextFadeLoader from './components/TextFadeLoader';
+import SlidingLandingPage from './components/SlidingLadingPage';
 
 injectGlobal`
   body {
@@ -24,8 +25,8 @@ class App extends React.Component {
           <Menu backgroundColor="green" />
           <Route path="/gooeyEffect" component={GooeyEffect} />
           <Route path="/textFadeLoader" component={TextFadeLoader} />
+          <Route path="/slidingLandingPage" component={SlidingLandingPage} />
         </React.Fragment>
-        {/* <HideMenuOnScroll color="red">chi</HideMenuOnScroll> */}
       </BrowserRouter>
     );
   }
