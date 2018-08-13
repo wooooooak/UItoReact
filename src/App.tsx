@@ -6,6 +6,7 @@ import Menu from './router/Menu';
 import GooeyEffect from './components/GooeyEffect';
 import TextFadeLoader from './components/TextFadeLoader';
 import SlidingLandingPage from './components/SlidingLadingPage';
+import MenuWithIndicator from './components/MenuWithIndicator';
 
 injectGlobal`
   body {
@@ -26,6 +27,7 @@ class App extends React.Component {
           <Route path="/gooeyEffect" component={GooeyEffect} />
           <Route path="/textFadeLoader" component={TextFadeLoader} />
           <Route path="/slidingLandingPage" component={SlidingLandingPage} />
+          <Route path="/menuWithIndicator" component={MenuWithIndicator} />
         </React.Fragment>
       </BrowserRouter>
     );
