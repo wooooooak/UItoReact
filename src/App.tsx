@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { injectGlobal } from 'styled-components';
 
 import Menu from './router/Menu';
+import About from './components/About';
 import GooeyEffect from './components/GooeyEffect';
 import TextFadeLoader from './components/TextFadeLoader';
 import SlidingLandingPage from './components/SlidingLadingPage';
@@ -24,6 +25,7 @@ class App extends React.Component {
       <BrowserRouter>
         <React.Fragment>
           <Menu backgroundColor="green" />
+          <Route exact={true} path="/" component={About} />
           <Route path="/gooeyEffect" component={GooeyEffect} />
           <Route path="/textFadeLoader" component={TextFadeLoader} />
           <Route path="/slidingLandingPage" component={SlidingLandingPage} />
