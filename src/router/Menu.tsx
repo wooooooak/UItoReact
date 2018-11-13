@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { Link } from 'react-router-dom';
-import styledComponents from 'styled-components';
-import styledComponentsTS from 'styled-components-ts';
-import styled from 'styled-components';
+import * as React from "react";
+import { Link } from "react-router-dom";
+import styledComponents from "styled-components";
+import styledComponentsTS from "styled-components-ts";
+import styled from "styled-components";
 
 interface MenuBarProps {
   backgroundColor?: string;
@@ -41,7 +41,7 @@ float: left;
 class Menu extends React.Component<MenuBarProps, StateProps> {
   state = {
     prevScrollpos: window.pageYOffset,
-    top: '0'
+    top: "0"
   };
 
   componentDidMount (): any {
@@ -50,12 +50,12 @@ class Menu extends React.Component<MenuBarProps, StateProps> {
       if (this.state.prevScrollpos < currentScrollpos) {
         this.setState({
           prevScrollpos: currentScrollpos,
-          top: '-100px'
+          top: "-100px"
         });
       } else {
         this.setState({
           prevScrollpos: currentScrollpos,
-          top: '0'
+          top: "0"
         });
       }
     };
@@ -70,6 +70,7 @@ class Menu extends React.Component<MenuBarProps, StateProps> {
           <NavBarElement to="/textFadeLoader">textFadeLoader</NavBarElement>
           <NavBarElement to="/slidingLandingPage">SlidingLandingPage</NavBarElement>
           <NavBarElement to="/menuWithIndicator">MenuWithIndicator</NavBarElement>
+          <NavBarElement to="/timeTime">timeTime</NavBarElement>
         </NavBar>
         <div />
         {this.state.prevScrollpos}

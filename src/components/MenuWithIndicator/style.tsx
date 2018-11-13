@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import styledTS from 'styled-components-ts';
+import styled from "styled-components";
+import styledTS from "styled-components-ts";
 
 export const Background = styled.div`
   background: #1d1d31;
